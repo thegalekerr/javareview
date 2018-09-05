@@ -1,21 +1,96 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package java1;
 
-/**
- *
- * @author 201430051
- */
+/*
+make class Person
+make static variable total person
+make 2 persons
+fields name age
+toString
+*/
 public class Java1 {
-
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String[] args) {
-        // TODO code application logic here
+        Person p = new Person("Gale", 20);
+        System.out.println(p.toString());
+        Person p1 = new Person("Jhance", 23);
+        System.out.println(p1.toString());
     }
     
+}
+
+
+class Person {
+    public static int total_no_persons; 
+     public String name; 
+     public int age; 
+
+     public Person(String name, int age) {
+         this.name = name; 
+         this.age = age; 
+         this.total_no_persons++;
+        
+     }
+     
+     public String toString() {
+         return  name + age + total_no_persons; 
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Car car1 = new Car("red", "ferari", 5);
+        //System.out.println(car1.toString());
+        System.out.println(car1.total_cars);
+        Car car2 = new Car ("Black", "Range Rover", 4);
+        System.out.println(car1.total_cars + " " + car2.total_cars);
+        //System.out.println(car2.toString());
+        Animal a = new Animal();
+        System.out.println(a.Eat());
+
+
+*/
+class Car {
+    public static int total_cars = 0;
+    private String color;
+    private String brand;
+    private int num_of_wheels;
+    
+    //Constructor
+    public Car(String color, String brand, int num_of_wheels) {
+        this.color = color;
+        this.brand = brand;
+        this.num_of_wheels = num_of_wheels;
+        total_cars++;
+    }
+    
+    //Override
+    public String toString() {
+        return color + brand + num_of_wheels + " total car   " + total_cars;
+     }
 }
